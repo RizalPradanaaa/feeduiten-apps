@@ -19,3 +19,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [TransaksiController::class, 'index']);
+Route::post('/simpan', [TransaksiController::class, 'store']);
+Route::get('/update/{id}', [TransaksiController::class, 'getById']);
+Route::put('/update/{id}', [TransaksiController::class, 'update']);
+Route::delete('/delete/{id}', [TransaksiController::class, 'destroy']);
